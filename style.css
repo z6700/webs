@@ -1,0 +1,562 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Spicy+Rice&display=swap');
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+:root{
+
+    /* color */
+    --primary-black-color: #bc6c25;
+    --secondary-grey-color: #540b0e;
+    --grey-light-color: #fefae0;
+
+    /* font size */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /* font weight */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Border radius */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-crcle: 50%;
+
+    /* Site max width */
+    --site-max-width:1300px;  
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #ffff;
+    color: black;
+    margin: 0;
+}
+
+section .title{
+    text-align: center;
+    font-family: "poppins",sans-serif;
+    text-transform: uppercase;
+    font-size: var(--font-size-l);
+    padding: 60px 0 60px;
+}
+
+section .title::after{
+    content: "";
+    width:80px;
+    height:5px;
+    display:block;
+    margin:10px auto 0;
+    background: var(--primary-black-color);
+}
+
+
+
+
+/* navbar */
+header{
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    
+}
+
+header .menu-btn{
+    display:none;
+}
+
+.menu-btn #menuBtn{
+    color: white;
+    background: none;
+    border:none;
+    font-size:var(--font-size-m)
+
+}
+
+.nav-links a {
+    font-size: var(--font-size-m);
+    color: white;   
+    border-radius: 30px;
+    text-decoration: none;
+    border: none;
+    margin: 0;
+    transition-duration: 0.2s;
+    padding:7px;
+    
+}
+
+.nav-links a:hover{
+    background-color: var(--secondary-grey-color);
+    border-radius: 20px;
+    color:white;
+    border-color: var(--secondary-grey-color);
+    padding: 7px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px;
+    background: rgba(0, 0, 0, 0.1   );
+    backdrop-filter: blur(10px);
+    color: white;
+    margin: 0;
+}
+nav h1{
+    margin:0;
+    font-size: var(--font-size-xxl);
+    font-family:"spicy rice",serif;
+
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+/* hero */
+
+.hero{
+    min-height: 100vh;
+    background-color: var(--primary-black-color);
+    display:flex;
+    gap:200px;
+    align-items: center;
+    padding: 140px 100px 100px ;
+    flex-wrap: wrap;
+}
+.hero-text{
+    min-height:70vh;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    color: white;
+    gap:15px;
+    width:100%;
+    max-width: 500px;
+}
+
+.hero .hero-text .cursive{
+    font-family: "Leckerli One", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+.hero img {
+    justify-content:center;
+    align-items: center;
+    width:100%;
+    max-width:400px;
+    filter:drop-shadow(0 25px 20px rgba(0,0,0,0.4))
+}
+.hero-text h2{
+    font-size: var(--font-size-xxl);
+    font-weight: bold;
+    font-family:"spicy rice",serif;
+    color: var(--secondary-grey-color);
+}
+
+.hero-text h3{
+    font-size: var(--font-size-l);
+    font-family: "poppins",sans-serif;
+    font-weight: var(--font-weight-semibold); 
+}
+.hero-text p {
+    font-size:var(--font-size-n);
+    font-family: "poppins",sans-serif;
+    font-weight: 200;
+    
+}
+
+.hero .hero-text .hero-buttons {
+    display: flex;
+    gap: 20px;
+    
+}
+.hero .hero-text .hero-buttons .Order{
+    text-decoration: none;
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-medium );
+    border-radius: var(--border-radius-m);
+    background-color: var(--secondary-grey-color);
+    color:white;
+    border: 1px solid;
+    border-color: var(--secondary-grey-color);
+    padding:10px 40px;
+}
+
+.hero .hero-text .hero-buttons .Learn{
+    text-decoration: none;
+    font-size: var(--font-size-s);
+    font-weight: var(--font-weight-medium );
+    border-radius: var(--border-radius-m);
+    background-color: var(--primary-black-color);
+    color:white;
+    border: 1px solid;
+    border-color: white;
+    padding:10px 26px;
+}
+
+.hero .hero-text .hero-buttons .Learn:hover{
+    cursor:pointer;
+    background-color: var(--secondary-grey-color);
+    border-color: var(--secondary-grey-color);
+}
+
+.hero .hero-text .hero-buttons .Order:hover{
+    background-color: var(--primary-black-color);
+    color:white;
+    border: 1px solid;
+    border-color: white;
+    cursor:pointer;
+}
+
+/* menu */
+
+.menu .products {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+    padding:30px 20px 100px;
+    gap:20px;
+    background-color: #252525 ;
+
+}
+
+.menu .title{
+    color:white;
+    font-family: "poppins",sans-serif;
+    font-size: var(--font-size-l);
+    padding: 50px;
+}
+
+.menu{
+    background-color: #252525      ;
+}
+
+.menu .products div{
+    display: flex;
+    border-radius: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:white;
+    text-align: center;
+    font-family: "poppins",sans-serif;
+    padding:20px;
+    gap:10px;
+}
+
+.menu .products img{
+    max-width: 200px;
+    width:100%  
+}
+
+.menu .products .oreo h3{
+    transform:translateY(30px);
+}
+
+.menu .products .oreo p{
+    transform:translateY(30px);
+
+}
+
+.menu .products div h3{
+    font-size: var(--font-size-n);
+    font-weight: var(--font-weight-semibold);
+}
+
+.menu .products div p{
+    font-size: 0.9rem;
+    max-width: 200px;
+    font-weight:200;
+}
+
+/* About Us */
+
+.about-us .about-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.about-us .about-content .bakery-image{
+    border-radius: var(--border-radius-crcle);
+    height: 400px;
+    width:400px;
+    padding:30px;
+    gap:50px;
+}
+
+.about-us .about-content .about-text{
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    justify-content: center;
+    padding: 30px;
+    gap:20px;
+}
+
+.about-us .about-content .about-text h3{
+    font-size: var(--font-size-xl);
+    font-family:"poppins",sans-serif;
+}
+
+.about-us .about-content .about-text p{
+    font-size: var(--font-size-n);
+    font-family:"poppins",sans-serif;
+}
+
+.about-us .about-content .about-text .social{
+    display:flex;
+    gap:5px;
+    font-size:var(--font-size-m);
+    text-align: center;
+    justify-content: center;
+    color: black;
+}
+
+
+/* contact us */
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.contact-us .contact-details {
+    display: flex;
+    flex-direction:column;
+    gap:40px;
+    padding: 30px;
+
+}
+
+.contact-us .contact-details p{
+    font-family: "poppins",sans-serif;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-us .form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid;
+    justify-content: center;
+    width:50vw;
+    border-color: grey;
+    padding:20px;
+    gap:20px
+
+}
+
+
+.contact-us .form .inputs input{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    outline:none;
+    border: 1px solid grey;
+    border-radius: 30px;
+    padding:15px;
+    width: 100%;
+    width: 30vw;
+}
+
+.contact-us .form .inputs{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.contact-us .form .inputs textarea{
+    min-height: 200px;
+    outline: none;
+    width: 30vw;
+    border-radius: 30px;
+    padding:15px;
+
+}
+
+.contact-us .form button {
+    color: black;
+    border:1px solid grey;
+    border-radius: 30px;
+    padding:10px;
+    transition: 0.2s;
+}
+
+.contact-us .form button:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+.contact-us .form form{
+    margin:30px;
+}
+
+/* Testimonials */
+
+.review{
+    padding: 50px 0 100px;
+    background-color: rgb(255, 241, 241);
+}
+
+.review .testimonials{
+    display: flex;
+    flex-direction: column;
+    text-align:center;
+    align-items:center;
+}
+
+.review .testimonials .user-image{
+    width:180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 50px;
+    border-radius:var(--border-radius-crcle);
+}
+
+.review .test-title{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 60px 0 100px;
+}
+
+.review .test-title::after{
+    content: "";
+    width:80px;
+    height:5px;
+    display:block;
+    margin:10px auto 0;
+    background: var(--primary-black-color);
+}
+
+.review .testimonials .name{
+    margin-bottom:16px;
+    font-family: "poppins",sans-serif;
+    font-size: var(--font-size-m);
+}
+
+.review .testimonials .feedback{
+    margin-bottom:30px;
+    font-weight: var(--font-weight-semibold);
+
+
+
+}
+
+/* footer */
+
+footer{
+    display:flex;
+    justify-content: center;
+    background-color: black;
+    padding:20px;
+}
+footer p{
+    font-size: 14px;
+    margin:0;
+    color: white;
+}
+
+@media screen and (max-width:640px) {
+    .menu .products {
+        grid-template-columns: 1fr 1fr ;
+        justify-content: space-evenly;
+    }
+    .hero{
+        flex-direction: column-reverse;
+        gap:50px;
+    }
+    .about-us .about-content{
+        flex-direction: column;
+    }
+    .contact{
+        flex-direction: column;
+
+    }
+}
+@media screen and (max-width:480px){
+    .hero .hero-text{
+        min-height:50vh;
+        min-width: 400px;
+        padding: 10px 10px 100px ;
+    }
+    .hero{
+        flex-direction: column-reverse;
+        padding: 50px 10px 0px ;
+        gap:0px;
+    }
+    nav .menu-btn{
+        display: block;
+        justify-content: flex-end;
+    }
+    nav{
+        justify-content: none;
+        padding: 20px 20px;
+
+    }
+    .nav-links{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        background-color: var(--secondary-grey-color);
+        top: 100%;
+        height: 100vh;
+        right: 0px;
+        gap:30px;
+        padding: 20px;
+        
+    }
+
+    .contact .contact-form .form{
+        width: 400px;
+    }
+    .contact .contact-form .form .inputs input,textarea{
+        min-width: 300px;
+    }
+
+    .nav-links.show-menu{
+        display: flex;
+        transform: translatex();
+        transition: 0.2s;
+    }
+    .hero img {
+        width:100%;
+        max-width:300px;
+    }
+
+    header{
+        height:50px;
+    }
+    nav h1{
+        font-size: var(--font-size-l);
+        padding:0;
+        margin: 0;
+    }
+}
